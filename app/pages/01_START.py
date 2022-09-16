@@ -1,6 +1,8 @@
 import streamlit as st
 from modules.VizEmb import *
-from modules import embed, neurafutures
+# from modules import embed, neurafutures
+# from zipfile import ZipFile
+import os
 
 st.markdown("""
 ## GETTING STARTED
@@ -11,6 +13,24 @@ Load your database to get started. Make sure your database follows the specified
 
 # thisVizEmbData.project_name = st.text_input("Enter your project name:", thisVizEmbData.project_name)
 uploaded_file = st.file_uploader("Upload database", type = ['csv']) # , 'xlsx', 'sqlite', 'db'])
+uploaded_imgs = st.file_uploader("Upload images", accept_multiple_files=True
+os.makedirs('app/imgs', exist_ok=True)
+for uploaded_img in uploaded_imgs:
+    f = open(f"app/imgs/{uploaded_img.name}", "wb")
+    f.write(bytes)
+    # bytes_data = uploaded_img.read()
+    # st.write(bytes_data)
+
+# uploaded_imgs = st.file_uplaoder("Upload images folder", type = ['zip'])
+# with ZipFile('Mail3.zip', 'r') as zipObj:
+#     zipObj.extractall('app/imgs')
+# # with ZipFile('Mail3.zip', 'r') as zipObj:
+# #    # Extract all the contents of zip file in different directory
+# #    zipObj.extractall('temp')
+# #    print('File is unzipped in temp folder') 
+
+if uploaded_imgs:
+    thisVizEmbData.imgs = uploaded_imgs
 
 if uploaded_file:
     thisVizEmbData.save_db_file(uploaded_file)

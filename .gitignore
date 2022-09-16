@@ -1,9 +1,12 @@
+# added
+/app/imgs
+.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 
-/app/imgs
 # C extensions
 *.so
 

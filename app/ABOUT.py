@@ -19,11 +19,14 @@ This software works for any data with a generic item-property schema:
 
 ## Usage
 
-1. Pre-process your data to make sure it is in a supported format.
-2. Load your database and (optional) images into the app/imgs folder.
-3. Explore the NETWORK, SEMANTICS, GRAPH, COMPARISON, and STATISTICS pages to analyze and visualize your data.
+1. Download the most recent NeuraFutures database from the [notion page](https://www.notion.so/140058b1791b419894779170b29d1271?v=ce87848b9d4741b4b7ed4b310334d032).
+2. (optional) Pre-process your data to make sure it is in a supported format.
+3. Upload your database in the START page.
+4. (optional) Put your images from the downloaded database folder (all .jpg and .png files only) into a folder and zip it. Upload this zip in the START page.
+5. Explore the NETWORK, SEMANTICS, GRAPH, COMPARISON, and STATISTICS pages to analyze and visualize your data.
 
 ## Pre-processing
+Pre-processing for NeuraFutures is handled automatically by the application. If the column values have chanegd since 9/2022, however, you may need to pre-process the data yourself. To do so:
 1. Make sure you have an ID (by index) and TITLE column for each item in your database.
 2. If you have a DATE column, make sure it is in an acceptable date format (e.g. YYYY).
 3. Make sure all data within each column is formatted consistently.
