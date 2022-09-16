@@ -13,7 +13,7 @@ Load your database to get started. Make sure your database follows the specified
 
 # thisVizEmbData.project_name = st.text_input("Enter your project name:", thisVizEmbData.project_name)
 uploaded_file = st.file_uploader("Upload database", type = ['csv']) # , 'xlsx', 'sqlite', 'db'])
-uploaded_imgs = st.file_uploader("Upload images", accept_multiple_files=True
+uploaded_imgs = st.file_uploader("Upload images", accept_multiple_files=True)
 os.makedirs('app/imgs', exist_ok=True)
 for uploaded_img in uploaded_imgs:
     f = open(f"app/imgs/{uploaded_img.name}", "wb")
