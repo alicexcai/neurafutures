@@ -70,8 +70,8 @@ discreteQuantProps: {
 # STATISTICS
 
 batchStats: [
-  "Average Values / Category",
-  "# of Items / Category"
+  "# of Items & Average Values / Category",
+  "# of Items / Category Value"
 ]
 
 presetCatCounts: ["[cat] Form-factor", "[cat] Category of BCI"]

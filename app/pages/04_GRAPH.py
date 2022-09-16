@@ -22,14 +22,14 @@ else:
         "Quantitative Data / Category",
         "Categorical Data / Time", 
         # "Categorical Data / Category", # not implemented
-        "Free form"
+        # "Free form (not recommended)"
         ])
     graph_type_prefix_dict = {
         "Quantitative Data / Time": {"x": "[date]", "y": "[quant]"},
         "Quantitative Data / Category": {"x": "[cat]", "y": "[quant]"},
         "Categorical Data / Time": {"x": "[date]", "y": "[cat]"},
         "Categorical Data / Category": {"x": "[cat]", "y": "[cat]"},
-        "Free form": {"x": "", "y": ""}
+        # "Free form (not recommended)": {"x": "", "y": ""}
         }
 
     with st.expander("Set graph parameters"):

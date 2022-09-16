@@ -56,7 +56,7 @@ def neurafutures_batchstats(thisVizEmbData):
                 st.write(f"{preset} Counts")
                 st.write(thisVizEmbData.calculate_quantd_counts(preset))
 
-        if "Average Values / Category" in selected_batchstats:
+        if "# of Items & Average Values / Category" in selected_batchstats:
 
             preset_categories = configData["presetCategories"]
             keyword_map = configData["keywordMap"]
@@ -88,7 +88,7 @@ def neurafutures_batchstats(thisVizEmbData):
                         mean = filtered_df.filter(regex=quantprop_short)[quantprop].mean()
                         averages_dict[preset][item][quantprop] = mean
 
-                with st.expander(f"{preset} Filtered df:"):
+                with st.expander(f"{preset} Data:"):
                     st.write(filtered_df)
 
             st.write(averages_dict)
