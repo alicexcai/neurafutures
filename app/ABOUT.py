@@ -1,4 +1,7 @@
-# VizTool NeuraFutures
+import streamlit as st
+
+st.markdown("""
+# NeuraFutures
 
 NeuraFutures Data Analaysis & Visualization Tool allows users to explore connections betewen items in any kind of database. The tool casts rich statical and semantic data into an embedding space and allows users to explore dimensions along which they want to visualize connections.
 
@@ -49,3 +52,5 @@ Your processed database should look something like this:
 * GRAPH - Visualize correlations in your data using various types of graphs.
 * COMPARISON - Compare and find similar items in your database.
 * STATISTICS - Perform statistical analyses on your data.
+
+""")
