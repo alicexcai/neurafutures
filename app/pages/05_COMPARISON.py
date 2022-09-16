@@ -89,7 +89,7 @@ else:
     # find nearest neighbors
 
     def find_similar_items(item1, num_similar_items):
-        embed.generate_default_embeddings(thisVizEmbData) # if st.session_state.generated == False else None
+        embed.generate_default_embeddings(thisVizEmbData) if st.session_state.generated == False else None
         embeddings = np.array(thisVizEmbData.default_embedding_df.unraveled)
         knn = NearestNeighbors(n_neighbors=num_similar_items)
         knn.fit(embeddings)
