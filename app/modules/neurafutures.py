@@ -6,7 +6,7 @@ import re
 
 # load NEURAFUTURES config file
 
-with open("modules/config.yml") as f:
+with open("app/modules/config.yml") as f:
     configData = yaml.safe_load(f)
 
 def neurafuture_preprocessing(df):
