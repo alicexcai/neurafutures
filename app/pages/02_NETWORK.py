@@ -37,9 +37,9 @@ else:
         st.session_state.generated = False
 
     if st.session_state.generated == False:
-        with st.spinner("Generating embedding..."):
-            embed.generate_default_embeddings(thisVizEmbData)
-            st.success("Generated default embeddings.")
+        # with st.spinner("Generating embedding..."):
+        embed.generate_default_embeddings(thisVizEmbData)
+            # st.success("Generated default embeddings.")
 
     # generate embeddings
 
