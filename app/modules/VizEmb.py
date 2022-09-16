@@ -164,12 +164,12 @@ class VizEmbData:
             self.sem_embedding_df.at[index, "sem_embedding"] = self.sem_embedding_df.filter(regex="sem|cat").iloc[index, :].to_numpy()
 
     def generate_default_embedding(self):
-        print("VizEmb generate_default_embeddings ckpt0")
+        # print("VizEmb generate_default_embeddings ckpt0")
         # calculate composite embedding by combining quantitative and semantic embeddings
         self.calculate_quant_embedding()
         self.calculate_sem_embedding()
         self.default_embedding_df.highdim = self.df.copy()
-        print("VizEmb generate_default_embeddings ckpt1")
+        # print("VizEmb generate_default_embeddings ckpt1")
         for index in range(len(self.df)):
 
             for prop in self.properties["quant"]:
@@ -181,8 +181,8 @@ class VizEmbData:
                     self.default_embedding_df.highdim.at[index, prop] = self.sem_embedding_df.iloc[index][prop]
             self.default_embedding_df.highdim.at[index, "[gen] composite_embedding"] = self.default_embedding_df.highdim.filter(regex="quant|sem|cat").iloc[index, :].to_numpy()
 
-        print("VizEmb generate_default_embeddings ckpt2")
-        
+        # print("VizEmb generate_default_embeddings ckpt2")
+
     def expand_embedding(self, embedding_obj, weights):
         if weights == "default":
             weights = {prop : 1 for prop in list(self.properties["quant"].keys()) + list(self.properties["sem"].keys()) + list(self.properties["cat"].keys())}
