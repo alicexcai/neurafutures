@@ -89,6 +89,8 @@ else:
     # find nearest neighbors
 
     def find_similar_items(item1, num_similar_items):
+        if 'generated' not in st.session_state:
+            st.session_state.generated = False
         if st.session_state.generated == False:
             embed.generate_default_embeddings(thisVizEmbData)
         embeddings = np.array(thisVizEmbData.default_embedding_df.unraveled)

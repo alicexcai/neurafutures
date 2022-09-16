@@ -44,7 +44,7 @@ def neurafutures_batchstats(thisVizEmbData):
 
     if st.button("Generate batch statistics"):
         
-        if "# of Items / Category" in selected_batchstats:
+        if "# of Items / Category Value" in selected_batchstats:
 
             thisVizEmbData.calculate_cat_counts()
 
