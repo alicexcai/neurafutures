@@ -24,7 +24,7 @@ def ai_embed(text):
 
 # generate default embeddings
 
-# @st.cache
+@st.cache
 def generate_default_embeddings(thisVizEmbData):
     # print("embed generate_default_embeddings...")
     thisVizEmbData.generate_default_embedding()
