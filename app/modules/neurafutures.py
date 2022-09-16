@@ -2,7 +2,6 @@ import streamlit as st
 from collections import defaultdict
 import yaml
 import numpy as np
-import re
 
 # load NEURAFUTURES config file
 
