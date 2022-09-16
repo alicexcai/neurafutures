@@ -26,9 +26,13 @@ def ai_embed(text):
 
 @st.cache
 def generate_default_embeddings(thisVizEmbData):
+    print("embed generate_default_embeddings...")
     thisVizEmbData.generate_default_embedding()
+    print("embed reduce2twod_embedding_df...")
     thisVizEmbData.reduce2twod_embedding_df(thisVizEmbData.default_embedding_df, weights = "default")
+    print("embed reduce2oned_embedding_df...")
     thisVizEmbData.reduce2oned_embedding_df()
+    print("embed set session_state.generated to true...")
     st.session_state.generated = True
 
 # generate specific embeddings
