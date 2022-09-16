@@ -23,7 +23,7 @@ def neurafuture_preprocessing(df):
             processed_df.at[i, "[img] Cover Image"] = "imgs/" + processed_df.iloc[i]["[img] Cover Image"].split("/")[-1]
 
     for quant_prop in processed_df.filter(regex="quant|date").columns:
-        processed_df.replace({quant_prop: {"None": 0.5}}, inplace=True)
+        processed_df.replace({quant_prop: {"None": 2000} if quant_prop == "[date] Date" else {"None": 0.5}}, inplace=True)
     
     for quantd_prop in configData["discreteQuantProps"]:
         processed_df = processed_df.replace({quantd_prop: configData["discreteQuantProps"][quantd_prop]})
