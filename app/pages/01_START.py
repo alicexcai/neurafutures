@@ -17,7 +17,7 @@ uploaded_imgs = st.file_uploader("Upload images", accept_multiple_files=True)
 os.makedirs('app/imgs', exist_ok=True)
 for uploaded_img in uploaded_imgs:
     f = open(f"app/imgs/{uploaded_img.name}", "wb")
-    f.write(bytes)
+    f.write(uploaded_img.read())
     # bytes_data = uploaded_img.read()
     # st.write(bytes_data)
 
