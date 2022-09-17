@@ -61,7 +61,7 @@ Your processed database should look something like this:
 ---
 
 ## Maintenance
-NeuraFutures Data Analaysis & Visualization Tool requires no maintenance unless 1) the images need to be updated or 2) the structure of the NeuraFutures database changes. 
+NeuraFutures Data Analaysis & Visualization Tool requires no maintenance unless 1) the images need to be updated or 2) the structure of the NeuraFutures database changes. Maintenance can be done locally and/or pushed to the deployed application.
 
 ### 1) Images need to be updated
 To update the images:
